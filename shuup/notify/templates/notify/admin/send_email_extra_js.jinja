@@ -1,0 +1,10 @@
+<script>
+    $("#nav-preview-tab").on("click", (function() {
+        preview_interval = setInterval(function() {
+            $('#preview').html($editor.summernote("code"));
+            if ($("#nav-preview-tab").hasClass("active") === false) {
+                clearInterval(preview_interval)
+            }
+        }, 2000)
+    }));
+</script>
